@@ -6,17 +6,9 @@
 }
 
 body {
-    background-image: url(imagens/photo-1598920710727-e6c74781538c.jpg);
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-            background-color: black;
-            background-position: center left;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-            overflow-x: hidden;
-    width: 100%;
+   background-color:#FFCBCB;
+   margin: 0;
+   padding: 0;
         }
 
 
