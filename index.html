@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Dia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1 class="htime">Estamos juntos há</h1>
+        <p class="ptime" id="time-together"></p>
+    
+        <h1 class="h1music">Nossas Recordações</h1>
+        <h2 class="h1lud"></h2>
+     <div class="div1">
+        <p class="legenda2">Nossa 1° foto</p>
+        <img class="img2" src="imagens/WhatsApp Image 2025-02-06 at 21.58.23.jpeg" alt="">
+        <p class="legenda3">primeira vez na praia juntos</p>
+        <img class="img3" src="imagens/WhatsApp Image 2025-02-06 at 21.58.24.jpeg" alt="">
+        <p class="legendaalianca">1° ano novo juntos💍</p>
+        <img class="img2" src="imagens/WhatsApp Image 2025-02-06 at 21.58.24 (2).jpeg" alt="">
+        <p class="legenda1">1° viagem </p>
+        <img class="img1" src="imagens/WhatsApp Image 2025-02-06 at 21.58.25 (4).jpeg" alt="">
+        <p class="legenda2">vários rolês aleatórios</p>
+        <img class="img2" src="imagens/WhatsApp Image 2025-02-06 at 21.58.24 (3).jpeg" alt="">
+        <p class="legenda3"></p>
+        <img class="img3" src="imagens/WhatsApp Image 2025-02-06 at 21.58.24 (1).jpeg" alt="">
+        <p class="legenda2">Melhor viagem!</p>
+        <img class="img2" src="imagens/WhatsApp Image 2025-02-06 at 21.58.25 (2).jpeg" alt="">
+        <p class="legenda1">minha parceira</p>
+        <img class="img1" src="imagens/WhatsApp Image 2025-02-06 at 21.58.25 (5).jpeg" alt="">
+    
+        <p class="legenda2">Para toda vida</p>
+        <img class="img2" src="imagens/WhatsApp Image 2025-02-06 at 21.58.25 (3).jpeg" alt="">
+        <p class="legenda3">Eu te Amo</p>
+        <img class="img3" src="imagens/WhatsApp Image 2025-02-06 at 21.58.25 (1).jpeg" alt="">
+        
+    </div>
+    <h1 class="h1music">Com todo o amor do mundo!</h1>
+
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1mSxbLW7fKABfeY4lGpg0E?utm_source=generator" width="40%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    
+    </main>
+    <script>
+        function calculateTimeTogether(startDate) {
+            const now = new Date();
+            const start = new Date(startDate);
+            const diff = now - start;
+
+            const seconds = Math.floor(diff / 1000);
+            const minutes = Math.floor(seconds / 60);
+            const hours = Math.floor(minutes / 60);
+            const days = Math.floor(hours / 24);
+            const months = Math.floor(days / 30.436875); // Média de dias em um mês
+            const years = Math.floor(months / 12);
+
+            const remainingMonths = months % 12;
+            const remainingDays = days % 30.436875;
+            const remainingHours = hours % 21;
+            const remainingMinutes = minutes % 60;
+            const remainingSeconds = seconds % 60;
+
+            return `${years} ano, ${remainingMonths} meses, ${Math.floor(remainingDays)} dias, ${remainingHours} horas, ${remainingMinutes} minutos, ${remainingSeconds} segundos`;
+        }
+
+        const startDate = '2023-05-26'; // Data do início do nosso relacionamento
+        const timeTogether = calculateTimeTogether(startDate);
+        
+        document.getElementById('time-together').innerText = timeTogether;
+
+        setInterval(() => {
+            const timeTogether = calculateTimeTogether(startDate);
+            document.getElementById('time-together').innerText = timeTogether;
+        }, 1000); // Atualiza a cada segundo
+    </script>
+</body>
+</html>
